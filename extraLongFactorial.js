@@ -4,9 +4,8 @@ function extraLongFactorials(n) {
     for(let i=2; i<=n ;i++){
         a = a * BigInt(i)
     }
-    console.log( a)
-    // let result = a.toString()
-    // return result
+    let result = a.toString()
+    return result
 
 }
 extraLongFactorials(25)
