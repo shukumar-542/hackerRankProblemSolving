@@ -2,7 +2,7 @@ function timeConversion(time){
     let input = time.split(":");
     let hours = parseInt(input[0])
     let timeFrame = input[2].slice(2);
-    const seconds = input[2].slice(0,2);
+    const seconds = input[2].slice(0,2);s
     if(timeFrame === "PM" && hours !==12){
         hours += 12;
 
