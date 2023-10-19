@@ -9,22 +9,42 @@ let newArray = string.split("\n");
 for(let newString of newArray){
     const [operation, indicator, words] = newString.split(';');
     if(operation === "S"){
-        // if(indicator === "M"){
-            const result = words.split(/(?=[A-Z])/).map(word => word.toLowerCase())
-            // console.log(result.join(' '));
-        // }
-        // else if(indicator === "M"){
-        //     console.log(words);
-        // }
-    //     console.log("from s ",operation,indicator,words);
+        let result = '';
+
+        for (let i = 0; i < words.length; i++) {
+          const char = words[i];
+          if (char === char.toUpperCase()) {
+            result += ' ' + char.toLowerCase();
+          } else {
+            result += char;
+          }
+        }
+      
+        console.log(result.trim());
+      
     }
     else{
         if(indicator === "M"){
            
             
-            const result = words.split(" ");
+            const word = words.split(' ');
+            let result = '';
+          
+            for (let i = 0; i < words.length; i++) {
+              const newWord = words[i];
+              if (i === 0 && newWord !== 'M') {
+                result += newWord.charAt(0).toUpperCase() + newWord.slice(1);
+              } else {
+                result += newWord.charAt(0).toUpperCase() + newWord.slice(1);
+              }
+            }
+          
+            if (indicator === 'M') {
+              result += '()';
+            }
+          
+            // return result;
             console.log(result);
-            
             
         }
 
