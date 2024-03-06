@@ -11,7 +11,7 @@ for(let i = 0 ; i<arr.length ; i++){
         max = arr[i]
     }
     if(arr[i] < min){
-        min = arr[i]
+        min = arr[i ]
     }
 
 }
