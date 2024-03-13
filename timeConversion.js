@@ -16,4 +16,4 @@ else if(timePeriod === 'AM' && hours === 12){
 }
 
 let time = [hours , minute , second].join(":")
-// console.log(time);
+console.log(time);
