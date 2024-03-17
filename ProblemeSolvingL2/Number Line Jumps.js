@@ -3,7 +3,7 @@ let v1 = 6
 let x2 = 47
 let v2 = 3
 // const v2 = 2  
-function kangaroo(x1, v1, x2, v2) {
+function kangaroo(x1, v1, x2,) {
     // Write your code here
     
     if (v1 <= v2) {
