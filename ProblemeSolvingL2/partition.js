@@ -3,7 +3,6 @@ let left = []
 let right = []
 let equal = arr[0]
 for (const number of arr) {
-    console.log(number);
     if(number > equal){
         right.push(number)
     }else if(number < equal){
