@@ -27,6 +27,7 @@ function repeatedString(s, n) {
         }
   
         count += divisionFloor;
+        
       }
     }
   
