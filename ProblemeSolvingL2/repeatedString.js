@@ -1,35 +1,29 @@
-const s = 'gfcaaaecbg'
-const n = 547602
+const s = 'aba'
+const n = 10
 
-let count = 0
-for(let i = 0 ; i<s.length; i++){
-    if(s[i] === 'a'){
-        count++
-    }
-}
-if(s.length === 1 && s ==='a'){
-    return n
-}else{
-    let result = ((n* count)/ s.length)
-    // return result
-    console.log(result);
-}
+/** 
+step 1 : find the string length
+step 2 : find the repeat a on this string;
+step 3 : find out the repeat time for string
+step 4 : find the remaining string
+step 5 : count total repeat a
 
-function repeatedString(s, n) {
-    const divisionFloor = Math.floor(n / s.length);
-    const mod = n % s.length;
-    let count = 0;
-  
-    for (let i = 0; i < s.length; i++) {
-      if (s[i] === "a") {
-        if (i < mod) {
-          count += 1;
-        }
-  
-        count += divisionFloor;
-        
-      }
-    }
-  
-    return count;
+*/
+
+const stringLength = s.length;
+let count = 0;
+let extraString = 0 
+for(let i = 0 ; i<s.length;  i++){
+  if(s[i] === 'a'){
+    count++
   }
+}
+const repeatedTime  = Math.floor(n / s.length)
+const remainingString = n - (repeatedTime * stringLength)
+for(let i = 0 ; i<remainingString;  i++){
+  if(s[i] === 'a'){
+    extraString++
+  }
+}
+const result = (count * repeatedTime) + extraString
+console.log(result);
