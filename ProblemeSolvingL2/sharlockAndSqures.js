@@ -8,4 +8,4 @@ for(let i = 1 ; i <= Math.floor(Math.sqrt(b)) ; i++){
         count++
     }
 }
-console.log(count);
+return count;
