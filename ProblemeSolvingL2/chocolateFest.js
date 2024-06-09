@@ -6,7 +6,6 @@ let eatsChocolate = 0
 let secondExchange = 0
 const spentChocolate = Math.floor(n / c);
 const exchangeChocolate = Math.floor(spentChocolate / m)
-console.log();
 const restWrapper = spentChocolate % m
 if (restWrapper + exchangeChocolate >= m) {
     const additionalChocolate = restWrapper + exchangeChocolate
