@@ -1,17 +1,26 @@
-const n = 7;
+const n = 15;
 const c = 3;
 const m = 2;
 
-let eatsChocolate = 0
-let secondExchange = 0
-const spentChocolate = Math.floor(n / c);
-const exchangeChocolate = Math.floor(spentChocolate / m)
-const restWrapper = spentChocolate % m
-if (restWrapper + exchangeChocolate >= m) {
-    const additionalChocolate = restWrapper + exchangeChocolate
-    secondExchange = additionalChocolate / 2;
 
 
+let buyChocolate = Math.floor(n / c);
+
+let totalWrapper = buyChocolate;
+while(totalWrapper >= m){
+    let exchangeChocolate = Math.floor( totalWrapper / m) 
+    totalWrapper  = (totalWrapper % m ) +  exchangeChocolate
+    buyChocolate += exchangeChocolate
 }
-eatsChocolate = secondExchange + exchangeChocolate + spentChocolate;
-console.log(eatsChocolate);
+console.log(buyChocolate);
+
+// function chocolateFeast(n, c, m) {
+//     let eaten = Math.floor(n / c);
+//     let wrappers = eaten;
+//     while (wrappers >= m) {
+//       let bars = Math.floor(wrappers / m);
+//       wrappers = wrappers % m + bars;
+//       eaten += bars;
+//     }
+//     return eaten;
+//   }
