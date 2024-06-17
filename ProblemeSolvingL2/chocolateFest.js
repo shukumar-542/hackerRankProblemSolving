@@ -14,13 +14,3 @@ while(totalWrapper >= m){
 }
 console.log(buyChocolate);
 
-// function chocolateFeast(n, c, m) {
-//     let eaten = Math.floor(n / c);
-//     let wrappers = eaten;
-//     while (wrappers >= m) {
-//       let bars = Math.floor(wrappers / m);
-//       wrappers = wrappers % m + bars;
-//       eaten += bars;
-//     }
-//     return eaten;
-//   }
