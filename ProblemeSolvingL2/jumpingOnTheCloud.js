@@ -6,16 +6,21 @@ const c = [
 const k = 2;
 
 let energy = 100;
-let jump = [(6 + k) % c.length]
-// console.log("jump",jump);
+let jump = (0 + k) % c.length
 if(c[jump] === 1){
     energy -= 3
 }else{
     energy -= 1
 }
-while(c[jump] != 0){
-    console.log('object');
-    jump = [(jump + k) % c.length]
-    console.log(jump);
+
+while(jump != 0){
+    // console.log('object');
+    jump = (jump + k) % c.length
+    // console.log(jump);
+    if (c[jump] === 1) {
+        energy -= 3;
+    } else {
+        energy -= 1;
+    }
 }
-console.log("energy",energy);
+console.log("final energy", energy);
